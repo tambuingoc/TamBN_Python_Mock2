@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="pic">
+    <file>bien.jpg</file>
+    <file>image1.jpg</file>
+    <file>rocky-coast-landscape-sea-nature-sky-overcast-clouds-scenery-horizon.jpg</file>
+  </qresource>
+</RCC>

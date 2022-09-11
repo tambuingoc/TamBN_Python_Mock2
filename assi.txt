@@ -1,0 +1,54 @@
+Create a window application:
+	- Sign Up and Login Interface ok
+	- With Login Successful ok
+		- Get weather/temperature/time from a website (HaNoi/DaNang/HCM) not display to screen
+			Reference here: https://www.thepythoncode.com/article/extract-weather-data-python
+		- Show infomation to GUI/plot  not
+		- Save 10 results to json file ok(all results)ok
+		- History Button (don't understand) ok
+Request:
+	- Using PyQt5 and QT Designer ok
+	- Convert output to an exe file ok
+
+
+	- basic concept: bien, kieu dl, toan tu, list, tuple, set, dictionary
+	- regular experession: search pattern, compile pattern
+	- oop: 4tc
+	- data analysis libraries: np, pd, matplotlib
+	- data stroring: xml, json, sql
+	- web scaping: request, bs4
+	- ui design: pyqt5, qt design, pyinstall
+fpt-software.udemy
+udacity
+django
+guest2209392
+KamI0625
+
+#hien bang tren giao dien
+
+Tức là khi mở app lên các e sẽ có giao diện đăng nhập. Sau khi đăng nhập xong thì mình có thể hiển thị 3 mục (Có thể là button) tương ứng với 3 thành phố. Khi mình bấm vào nó có thể show lên thời tiết hiện tại (show = view trên GUI hoặc biểu đồ plot).
+
+Tiếp theo là nút history button để lưu lịch sử mình get data (10 lần) sau khi mở app lên. Ví dụ có thể trigger theo thời gian (1h hoặc 1 phút) để lưu data) và liên tục đẩy vào file json. Khi bấm nút history này thì sẽ show ra 10 lần gần nhất trên view
+
+'''
+        #save results to json file
+        dict_data = dict(weather = weather_list, temp_min = tempmin_list, temp_max = tempmax_list, hour = hour_list )
+        with open('json_weather_hn.json', 'w', encoding = 'utf-8') as fw:
+            json.dump(dict_data, fw, ensure_ascii = False)
+        fw.close()
+
+'''
+
+
+        #save results to json file DN
+        dict_data = dict(weather = weather_list, temp_min = tempmin_list, temp_max = tempmax_list, hour = hour_list )
+        with open('json_weather_dn.json', 'w', encoding = 'utf-8') as fw:
+            json.dump(dict_data, fw, ensure_ascii = False)
+        fw.close()
+
+#HCM
+        #save results to json file
+        dict_data = dict(weather = weather_list, temp_min = tempmin_list, temp_max = tempmax_list, hour = hour_list )
+        with open('json_weather_hcm.json', 'w', encoding = 'utf-8') as fw:
+            json.dump(dict_data, fw, ensure_ascii = False)
+        fw.close()
